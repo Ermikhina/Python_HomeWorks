@@ -4,17 +4,14 @@
 # # [1, 1, 2, 0, -1, 3, 4, 4] -> 6
 # # [1, 1, 2, 0, 1, 2, 1, 2] -> 3
 
-# n = int(input('Введите кол-во элементов: '))list_1 = []
-# # for _ in range(n):
-# #     list_1.append(int(input('Введите значения: ')))
-# # print(list_1)
-
-# 10:48
-# чтобы наполнить список значениями
-
-# 10:49
-# n = int(input('Введите кол-во элементов: '))
-# list_1 = []
-# for _ in range(n):
-#    list_1.append(int(input('Введите значения: ')))
-# # print(list_1)
+n = int(input("Введите кол-во элементов в списке: "))
+lst = []
+for k in range(n):
+   lst.append(int(input(f"Введите значениe {k+1}-го элемента: ")))
+print(lst)
+# lst = [1, 1, 2, 0, -1, 3, 4, 4]
+res_lst = []
+for i in lst:
+    if i not in res_lst:
+        res_lst.append(i)
+print(len(res_lst))
