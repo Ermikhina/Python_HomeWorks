@@ -11,9 +11,19 @@
 x = int(input("Введите искомое в списке число: "))
 lst = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
 delt_min = abs(lst[0]-x)
-n = 0
+n1 = 0
+n2 = 0
 for k in range(len(lst)):
    if abs(lst[k]-x)<delt_min:
        delt_min=abs(lst[k]-x)
-       n = k
-print(lst[n])
+       n1 = k
+   else:
+    if (abs(lst[k]-x)==delt_min) and k!=n1:
+       n2 = k
+if abs(lst[n1]-x)==abs(lst[n2]-x):
+    print(lst[n1], lst[n2]) if lst[n1]<lst[n2] else print(lst[n2], lst[n1])
+else:
+   if abs(lst[n1]-x)<abs(lst[n2]-x):
+      print(lst[n1])
+   else:
+      print(lst[n2])
