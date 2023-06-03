@@ -8,23 +8,22 @@
 # Output: 10
 # (*) Усложнение. Если в списке несколько чисел "равноблизких" к заданному числу X,
 # выводим все числа в отсортированном виде (по возрастанию)
-# М. б. ТОЛЬКО 2 числа, "равноблизких" к заданному числу X: слева и справа.
 x = int(input("Введите искомое в списке число: "))
 lst = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
 delt_min = abs(lst[0]-x)
-n1 = 0  # индекс 1-го равноблизкого числа
-n2 = 0  # индекс 2-го равноблизкого числа
+n = [0, 0]
+out_lst = []
 for k in range(len(lst)):
    if abs(lst[k]-x)<delt_min:
        delt_min=abs(lst[k]-x)
-       n1 = k
+       n[0] = k
    else:
-    if abs(lst[k]-x)==delt_min and k!=n1:
-       n2 = k
-if abs(lst[n1]-x)==abs(lst[n2]-x):
-    print(lst[n1], lst[n2]) if lst[n1]<lst[n2] else print(lst[n2], lst[n1])
+    if (abs(lst[k]-x)==delt_min) and k!=n[0]:
+       n[1] = k
+out_lst.append(lst[n[0]])
+out_lst.append(lst[n[1]])
+out_lst.sort()
+if abs(lst[n[0]]-x)==abs(lst[n[1]]-x):
+    print(out_lst)
 else:
-   if abs(lst[n1]-x)<abs(lst[n2]-x):
-      print(lst[n1])
-   else:
-      print(lst[n2])
+      print(out_lst[0])
