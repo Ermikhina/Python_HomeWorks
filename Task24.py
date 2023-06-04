@@ -12,7 +12,7 @@
 
 # Input1: 11, 92, 1, 42, 15, 12, 11, 81
 # Output1: Макс. кол-во ягод 184, собрано для куста 1
-input_lst = [1, 2, 3, 4, 5, 6, 7, 8]
+input_lst = [11, 92, 1, 42, 15, 12, 11, 81]
 res_lst = []
 res_lst.append(input_lst[len(input_lst)-1] + input_lst[0] + input_lst[1])
 for i in range (len(input_lst)-1):
