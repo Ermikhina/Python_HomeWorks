@@ -37,7 +37,7 @@ let_lat = [['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R'], ['D', 'G'],
 let_cost  = [1, 2, 3, 4, 5, 8, 10]
 
 word_cost = 0
-word = "competition"
+word = "notebook"
 for char in word.upper():
     for i in range(len(let_lat)):
         if char in let_lat[i]:
