@@ -23,8 +23,7 @@ for i in range (n1):
     if arr1[i] not in arr2:
         print(arr1[i])
 
-
-        def defference_list(list1: list, list2: list) -> list:
+def defference_list(list1: list, list2: list) -> list:
     set_list2 = set(list2)
     new_list = []
     for item in list1:

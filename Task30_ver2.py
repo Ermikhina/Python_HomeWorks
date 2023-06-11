@@ -18,11 +18,7 @@
 # input, в одну строку, вам понадобится распаковка и Comprehension или map
 
 def arith_pro(el_1, dif, m):
-    l_pro = [el_1]
-    el_k = el_1
-    for i in range(m-1):
-        el_k += dif
-        l_pro.append(el_k)
+    l_pro = [el_1+i*dif for i in range(m)]  # List Comprehension
     return l_pro
 
 a1 = int(input("Введите 1-й элемент прогрессии: "))

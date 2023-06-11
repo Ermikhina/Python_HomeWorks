@@ -18,3 +18,16 @@
 #     lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 #     <function_name>(lst1, 2, 10) -> [(1, 9), (3, 3), (7, 4), (9, 10), (10, 2), (13, 8), (14, 10), (19, 7)]
 
+# list_1=[(i, i) for i in range(1, 101) if i % 2 == 0]   # List Comprehension
+
+def in_ran(data_list, min, max):
+    res_list = []
+    for i in range(len(data_list)):
+        if data_list[i] >= min and data_list[i] <= max:
+            res_list.append(i)
+    return res_list
+
+input_lst = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+print(in_ran(input_lst, 2, 10))
+print(in_ran(input_lst, 2, 9))
+print(in_ran(input_lst, 0, 6))
