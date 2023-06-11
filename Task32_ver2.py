@@ -21,8 +21,8 @@
 # list_1=[(i, i) for i in range(1, 101) if i % 2 == 0]   # List Comprehension
 
 def in_ran(data_list, min, max):
-    res_list = [(i, data_list[i]) for i in range(len(data_list)) if data_list[i] >= min and data_list[i] <= max]
-    return res_list
+    # res_list = [(i, data_list[i]) for i in range(len(data_list)) if data_list[i] >= min and data_list[i] <= max]
+    return [(i, data_list[i]) for i in range(len(data_list)) if data_list[i] >= min and data_list[i] <= max]
     #  for i in range(len(data_list)):
     #      if data_list[i] >= min and data_list[i] <= max:
     #          res_list.append(i)
