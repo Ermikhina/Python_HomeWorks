@@ -43,9 +43,9 @@ with open (file_name, mode = "rt", encoding = 'utf-8') as data:
     result_list = list ()
     for item in data:
     #   print (*item.strip().split("#"))
-        last_name,first_name, parent = item.strip().split("#")
-        print (last_name,first_name, parent)
-        list1 = [last_name,first_name, parent ]
+        last_name, first_name, parent = item.strip().split("#") # распаковка
+        print (last_name, first_name, parent)
+        list1 = [last_name, first_name, parent]
         result_list.append(list1)
 print (result_list)
 
